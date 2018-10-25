@@ -42,7 +42,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.websocket" name="websocket library" version="0.50.0" provider-name="back-to">
+<addon id="script.module.websocket" name="websocket library" version="0.53.0" provider-name="back-to">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
   </requires>
@@ -50,10 +50,18 @@
   <extension point="xbmc.addon.metadata">
     <summary>websocket library repacked for Kodi</summary>
     <source>https://github.com/websocket-client/websocket-client</source>
-    <website>https://github.com/back-to/script.module.websocket</website>
+    <website>https://github.com/back-to/repo</website>
     <platform>all</platform>
     <license>LGPL</license>
     <news>
+    0.53.0
+    - on_open() missing 1 required positional argument: 'ws' (#471)
+    0.52.0
+    - fixed callback argument in _app.py (#468)
+    - Fixing none compare bug in run_forever (#472)
+    - Fix NoneType bug introduced by #386 fix (#476)
+    0.51.0
+    - revert "WebSocketApp class to make it inheritable (#442)" because of breaking the compatibily
     0.50.0
     - fixed pong before ping (#461)
     - pass proper arguments to method callbacks (#462)
@@ -80,10 +88,10 @@
   </extension>
 </addon>
 
-<addon id="service.liveproxy" name="LiveProxy" version="0.0.4" provider-name="back-to">
+<addon id="service.liveproxy" name="LiveProxy" version="0.1.1" provider-name="back-to">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="script.module.streamlink" version="0.14.2.33"/>
+    <import addon="script.module.streamlink" version="0.14.2.138"/>
     <import addon="script.module.back-to-plugins" version="2018.7.18" optional="true"/>
     <import addon="script.module.streamlink-plugins" version="0.0.0" optional="true"/>
   </requires>
@@ -95,12 +103,17 @@
     <description>LiveProxy for Kodi</description>
     <platform>all</platform>
     <license>BSD 2-Clause Simplified License</license>
-    <source>https://github.com/back-to/service.liveproxy</source>
+    <source>https://github.com/back-to/liveproxy</source>
     <website>https://github.com/back-to/liveproxy</website>
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
     <news>
+0.1.1
+- If --url is used, it will always be used as an URL.
+0.1.0
+- New commands --file and --format got added, they can create valid URLs from a file for the new base64 URL style.
+- The LiveProxy URL build was simplified, a Streamlink command like can be used after it got base64 encoded, more details can be found on the website.
 0.0.4
 - Improve Streamlink default Plugins load speed
 - Custom plugins with `from streamlink.plugin.api import http` are not allowed,
@@ -146,7 +159,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.streamlink" name="Streamlink Library" version="0.14.2.86" provider-name="back-to">
+<addon id="script.module.streamlink" name="Streamlink Library" version="0.14.2.138" provider-name="back-to">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.18.4"/>
@@ -169,8 +182,10 @@
     <platform>all</platform>
     <license>BSD 2-Clause Simplified License</license>
     <website>https://streamlink.github.io</website>
-    <source>https://github.com/back-to/script.module.streamlink</source>
+    <source>https://github.com/back-to/repo</source>
     <news>
+    0.14.2.138
+    - Streamlink 0.14.2+138.gb21df07
     0.14.2.86
     - Streamlink 0.14.2+86.g2c9cfe84
     0.14.2.42

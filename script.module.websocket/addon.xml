@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.websocket" name="websocket library" version="0.50.0" provider-name="back-to">
+<addon id="script.module.websocket" name="websocket library" version="0.53.0" provider-name="back-to">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
   </requires>
@@ -7,10 +7,18 @@
   <extension point="xbmc.addon.metadata">
     <summary>websocket library repacked for Kodi</summary>
     <source>https://github.com/websocket-client/websocket-client</source>
-    <website>https://github.com/back-to/script.module.websocket</website>
+    <website>https://github.com/back-to/repo</website>
     <platform>all</platform>
     <license>LGPL</license>
     <news>
+    0.53.0
+    - on_open() missing 1 required positional argument: 'ws' (#471)
+    0.52.0
+    - fixed callback argument in _app.py (#468)
+    - Fixing none compare bug in run_forever (#472)
+    - Fix NoneType bug introduced by #386 fix (#476)
+    0.51.0
+    - revert "WebSocketApp class to make it inheritable (#442)" because of breaking the compatibily
     0.50.0
     - fixed pong before ping (#461)
     - pass proper arguments to method callbacks (#462)
