@@ -159,7 +159,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.streamlink" name="Streamlink Library" version="0.14.2.138" provider-name="back-to">
+<addon id="script.module.streamlink" name="Streamlink Library" version="1.0.0" provider-name="back-to">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.18.4"/>
@@ -184,6 +184,8 @@
     <website>https://streamlink.github.io</website>
     <source>https://github.com/back-to/repo</source>
     <news>
+    1.0.0
+    - Streamlink 1.0.0
     0.14.2.138
     - Streamlink 0.14.2+138.gb21df07
     0.14.2.86
